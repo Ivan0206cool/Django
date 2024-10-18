@@ -27,3 +27,4 @@ class VendorAdmin(admin.ModelAdmin):
 class FoodAdmin(admin.ModelAdmin):
 	list_display = [field.name for field in Food._meta.fields]
 	list_filter = ('food_price',)
+	search_fields = ('food_name','food_price') # 搜尋欄位
